@@ -5,10 +5,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class DeptManager implements Manager<Dept, Integer>{
+public class DeptManager implements {
 	private List<Dept> list = new ArrayList<>();
 
-	@Override
+	public void create(Dept d){
+		this.list.add(d);
+	}
 	public List<Dept> getlist() {
 		return list;
 	}
@@ -47,6 +49,8 @@ public class DeptManager implements Manager<Dept, Integer>{
 		}
 		
 		mgr.delete(5);
+		Dept d = new Dept(1,"HR","Pune");
+		mgr.update(d);
 		
 		for (Dept  dept : mgr.getlist()) {
 			System.out.println(dept);
