@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class DeptManager implements {
+public class DeptManager  {
 	private List<Dept> list = new ArrayList<>();
 
 	public void create(Dept d){
